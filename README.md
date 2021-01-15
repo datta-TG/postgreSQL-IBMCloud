@@ -68,7 +68,7 @@ The following checkmark and the word 'normal' will appear once the Kubernetes Cl
 
 * A new window opens, select the cluster and enter the name you want for the PostgreSQL workspace; in this case, it will be called _postgresql-example_; then, go to the bottom to find the workspace parameters.
 
-You can modify the different installation parameters at the bottom. We will leave them by default except for the user password, which you will need to access your PostgreSQL console and work with your databases. You can read more about setting up the parameters [here](https://cloud.ibm.com/catalog/content/postgres "here").
+You can modify the different installation parameters at the bottom. We will leave them by default except for the user password, which you will need to access your PostgreSQL console and work with your databases. You can read more about setting up the parameters [here](https://cloud.ibm.com/catalog/content/postgresql "here").
 
 Make sure you set up a password in the _postgresqlPostgresPassword_ variable. 
 
@@ -123,7 +123,9 @@ When you're done, accept the terms, and click on *Install*.
 
 ![Screenshot](textpost4.PNG)
 
-* Once you're inside the pod terminal, you can execute the following command to login into PostgreSQL to create and manage your databases. Use your previously created password.
+* Once you're inside the pod terminal, you can execute the following command to login into PostgreSQL and create and manage your databases. Use your previously created password.
+
+`$ psql -h localhost -U postgres --password -p 5432`
 
 ![Screenshot](textpost5.PNG)
 
